@@ -202,7 +202,7 @@ def uniformCostSearch(problem):
         # Pop a node from the queue, assigning variables to its xy coordinates, list of actions, and cost
         nodeState, path_to_curr, cost = q.pop()
 
-        # Add the xy coordinate to the set of explored nodes and also into the dictionary mapped to its cost
+        # Add the xy coordinate to the set of explored nodes
         explored.add(nodeState)
 
         # Get the successors to the current node
@@ -224,7 +224,7 @@ def uniformCostSearch(problem):
                     # Calculate the new path to the current child
                     newPath = path_to_curr + [child[1]]
 
-                    # If child already in queue with higher cost, update its cost (priority)
+                    # If child already in queue with higher cost, update its cost (priority) and path
                     # If child already in queue with equal or lower cost, do nothing.
                     # If child not in queue, push it into the queue
                     q.update((child[0], newPath, newCost), newCost)
@@ -264,7 +264,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
         # Pop a node from the queue, assigning variables to its xy coordinates, list of actions, and cost
         nodeState, path_to_curr, cost = q.pop()
 
-        # Add the xy coordinate to the set of explored nodes and also into the dictionary mapped to its cost
+        # Add the xy coordinate to the set of explored nodes
         explored.add(nodeState)
 
         # Get the successors to the current node
@@ -287,7 +287,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
                     # Calculate the new path to the current child
                     newPath = path_to_curr + [child[1]]
 
-                    # If child already in queue with higher cost, update its cost
+                    # If child already in queue with higher cost, update its cost and path
                     # If child already in queue with equal or lower cost, do nothing.
                     # If child not in queue, push it into the queue
                     q.update((child[0], newPath, newCost), newCost)

@@ -1,6 +1,13 @@
 # search.py
 # ---------
-# Greg Griffin and David Novak 
+#
+# breadthFirstSearch(), uniformCostSearch(), and aStarSearch() authored by Greg Griffin
+#
+# Run configurations:
+# BFS: python pacman.py -l bigMaze --frameTime =.03 -p SearchAgent -a fn=bfs -z .5
+# UCS: python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+# A*:  python pacman.py -l bigMaze --frameTime=.03 -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+#
 # ---------
 # Licensing Information:  You are free to use or extend these projects for
 # educational purposes provided that (1) you do not distribute or publish
